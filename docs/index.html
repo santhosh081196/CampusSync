@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Calendar Canvas Dashboard combines Google Calendar events and Canvas deadlines in an always-visible Windows and macOS desktop widget.">
+  <title>Calendar Canvas Dashboard</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><img src="assets/logo.svg" alt=""><span>Calendar Canvas</span></a><div class="nav-links"><a href="#features">Features</a><a href="#install">Install</a><a href="#setup">Setup</a><a href="https://github.com/YOUR-USERNAME/calendar-canvas-dashboard" class="button">View on GitHub</a></div></div></nav>
+<main id="top">
+<section class="hero"><div class="container hero-grid"><div><span class="eyebrow">Google Calendar + Canvas, together</span><h1>See every meeting and deadline <span class="gradient">without opening another tab.</span></h1><p class="lead">Calendar Canvas Dashboard is a lightweight, always-on-desktop productivity widget for students, researchers, and anyone who lives between Google Calendar and Canvas LMS.</p><div class="actions"><a class="button" href="#install">Install the app</a><a class="button secondary" href="#usefulness">Why it is useful</a></div></div><div class="hero-art"><img src="assets/dashboard-preview.svg" alt="Preview of Calendar Canvas Dashboard"></div></div></section>
+<section id="features" class="section"><div class="container"><h2>One timeline for your day</h2><p class="section-intro">The dashboard merges upcoming events and academic deadlines, sorts them chronologically, and keeps them visible in a compact desktop window.</p><div class="grid-3"><article class="card"><div class="icon">📅</div><h3>Google Calendar</h3><p>Read-only access to upcoming events from your primary Google Calendar through OAuth.</p></article><article class="card"><div class="icon">🎓</div><h3>Canvas deadlines</h3><p>Assignments, quizzes, discussions, and planner items from any Canvas instance that permits personal access tokens.</p></article><article class="card"><div class="icon">🖥️</div><h3>Desktop-first</h3><p>Frameless, resizable, always-on-top, auto-refreshing, and able to launch automatically when you sign in.</p></article></div></div></section>
+<section id="usefulness" class="section"><div class="container split"><div><h2>Why this app is useful</h2><p class="section-intro">Calendar apps show meetings. Learning systems show assignments. Your actual workload spans both.</p><ul class="roadmap"><li>Reduces missed deadlines caused by checking Canvas and Google Calendar separately.</li><li>Provides an immediate view of what is due today, tomorrow, and later.</li><li>Helps students plan study time around classes, meetings, research, work, and personal appointments.</li><li>Keeps essential information visible without permanently occupying a browser tab.</li><li>Opens the original Canvas or Google item when more detail is needed.</li></ul></div><div class="card"><h3>Best for</h3><p>University students, teaching assistants, graduate researchers, faculty, online learners, and anyone managing coursework alongside meetings and personal commitments.</p><h3>Current account support</h3><p>The current release supports one Google account and one Canvas account. Multiple-account support is planned.</p></div></div></section>
+<section id="install" class="section"><div class="container"><h2>Install and run</h2><p class="section-intro">Node.js 20 LTS or later is required when running from source.</p><div class="split"><div><h3>Windows 10/11</h3><pre><code>npm install
+npm start
+
+# Build an installer
+npm run dist:win</code></pre><p class="notice">If electron-builder cannot create symbolic links, enable Windows Developer Mode or run the build terminal as Administrator.</p></div><div><h3>macOS</h3><pre><code>npm install
+npm start
+
+# Current Mac
+npm run dist:mac
+
+# Universal Intel + Apple Silicon
+npm run dist:mac:universal</code></pre><p class="notice">A macOS DMG should be built on a Mac. An unsigned personal build may require Control-click → Open on first launch.</p></div></div></div></section>
+<section id="setup" class="section"><div class="container"><h2>Connect your accounts</h2><div class="steps"><article class="step"><div><h3>Create a Canvas token</h3><p>Canvas → Account → Settings → Approved Integrations → New Access Token. Enter your Canvas base URL and token in the app Settings.</p></div></article><article class="step"><div><h3>Create Google OAuth credentials</h3><p>Enable Google Calendar API, configure the OAuth consent screen, add your account as a test user, and create a Desktop app OAuth client.</p></div></article><article class="step"><div><h3>Connect Google</h3><p>Paste the downloaded OAuth JSON into app Settings, select Connect Google, and approve read-only Calendar access in your browser.</p></div></article><article class="step"><div><h3>Enable startup</h3><p>Turn on “Start when computer turns on” in Settings so the dashboard opens after Windows or macOS login.</p></div></article></div></div></section>
+<section class="section"><div class="container split"><div><h2>Privacy by design</h2><p class="section-intro">There is no analytics service or cloud backend in this project. Google Calendar is requested read-only, and Canvas data is fetched directly from your institution.</p><a class="button secondary" href="https://github.com/YOUR-USERNAME/calendar-canvas-dashboard/blob/main/PRIVACY.md">Read the privacy note</a></div><div><h2>Roadmap</h2><ul class="roadmap"><li>Multiple Google and Canvas accounts</li><li>Secure OS keychain credential storage</li><li>Native deadline notifications</li><li>ICS export and subscription tools</li><li>Course and account color filters</li></ul></div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>Calendar Canvas Dashboard · MIT License</span><span>Built for focused, deadline-aware work.</span></div></footer>
+</body>
+</html>

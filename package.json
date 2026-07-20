@@ -1,0 +1,45 @@
+{
+  "name": "calendar-canvas-desktop",
+  "version": "1.1.0",
+  "description": "Always-on-desktop Google Calendar and Canvas deadline dashboard",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "dist:win": "electron-builder --win nsis",
+    "dist:mac": "electron-builder --mac dmg",
+    "dist:mac:arm": "electron-builder --mac dmg --arm64",
+    "dist:mac:intel": "electron-builder --mac dmg --x64",
+    "dist:mac:universal": "electron-builder --mac dmg --universal"
+  },
+  "dependencies": {
+    "electron-store": "8.2.0",
+    "googleapis": "^144.0.0"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.abarna.calendarcanvasdashboard",
+    "productName": "Calendar Canvas Dashboard",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.productivity",
+      "identity": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

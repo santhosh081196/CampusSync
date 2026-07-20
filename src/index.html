@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar + Canvas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="titlebar">
+      <div class="drag"><strong>My Schedule</strong><span id="status">Starting…</span></div>
+      <button id="pin" title="Always on top">📌</button>
+      <button id="settingsBtn" title="Settings">⚙</button>
+      <button id="minBtn" title="Minimize">—</button>
+      <button id="closeBtn" title="Close">×</button>
+    </header>
+
+    <section class="toolbar">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="today">Today</button>
+      <button class="filter" data-filter="week">7 days</button>
+      <button id="refreshBtn">↻</button>
+    </section>
+
+    <section id="errorBox" class="error hidden"></section>
+    <section id="items" class="items"></section>
+
+    <dialog id="settingsDialog">
+      <form method="dialog" id="settingsForm">
+        <h2>Connections & Settings</h2>
+        <label>Canvas URL
+          <input id="canvasBaseUrl" placeholder="https://canvas.asu.edu" />
+        </label>
+        <label>Canvas access token
+          <input id="canvasToken" type="password" placeholder="Leave blank to keep existing token" />
+        </label>
+        <p class="hint">Canvas → Account → Settings → Approved Integrations → New Access Token.</p>
+        <label>Google OAuth credentials JSON
+          <textarea id="googleCredentials" rows="4" placeholder="Paste the downloaded credentials JSON here once"></textarea>
+        </label>
+        <div class="row">
+          <button type="button" id="connectGoogle">Connect Google</button>
+          <button type="button" id="disconnectGoogle" class="secondary">Disconnect</button>
+        </div>
+        <label class="check"><input id="launchAtLogin" type="checkbox" /> Start when computer turns on</label>
+        <label class="check"><input id="alwaysOnTop" type="checkbox" /> Stay above other windows</label>
+        <label>Refresh every (minutes)<input id="refreshMinutes" type="number" min="5" max="120" /></label>
+        <label>Show next (days)<input id="daysAhead" type="number" min="1" max="365" /></label>
+        <div class="actions">
+          <button value="cancel" class="secondary">Cancel</button>
+          <button id="saveSettings" value="default">Save</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+  <script src="renderer.js"></script>
+</body>
+</html>

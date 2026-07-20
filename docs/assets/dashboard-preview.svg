@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-label="Dashboard preview">
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="24" flood-opacity=".22"/></filter></defs>
+  <rect width="960" height="640" fill="#eef2ff"/>
+  <circle cx="85" cy="88" r="110" fill="#c7d2fe"/><circle cx="890" cy="560" r="170" fill="#ccfbf1"/>
+  <g filter="url(#shadow)">
+    <rect x="270" y="35" width="420" height="570" rx="28" fill="#101624"/>
+    <rect x="292" y="58" width="376" height="52" rx="15" fill="#1d2639"/>
+    <text x="315" y="91" fill="#fff" font-family="Arial" font-size="22" font-weight="700">Calendar Canvas</text>
+    <text x="630" y="91" fill="#aab4c8" font-family="Arial" font-size="18">⚙</text>
+    <text x="302" y="145" fill="#8f9ab0" font-family="Arial" font-size="13" font-weight="700">TODAY</text>
+    <g font-family="Arial">
+      <rect x="292" y="162" width="376" height="94" rx="17" fill="#1d2639"/>
+      <circle cx="320" cy="195" r="8" fill="#6d5dfc"/>
+      <text x="340" y="197" fill="#fff" font-size="17" font-weight="700">Research meeting</text>
+      <text x="340" y="222" fill="#9aa6bc" font-size="13">Google Calendar · 11:00 AM</text>
+      <text x="340" y="242" fill="#7f8ba3" font-size="12">ASU Research</text>
+      <rect x="292" y="269" width="376" height="108" rx="17" fill="#1d2639"/>
+      <circle cx="320" cy="303" r="8" fill="#15b8a6"/>
+      <text x="340" y="305" fill="#fff" font-size="17" font-weight="700">Signal Processing Homework</text>
+      <text x="340" y="331" fill="#9aa6bc" font-size="13">Canvas · Due 11:59 PM</text>
+      <text x="340" y="353" fill="#7f8ba3" font-size="12">EEE 547 · 20 points</text>
+      <text x="302" y="417" fill="#8f9ab0" font-size="13" font-weight="700">TOMORROW</text>
+      <rect x="292" y="434" width="376" height="94" rx="17" fill="#1d2639"/>
+      <circle cx="320" cy="467" r="8" fill="#6d5dfc"/>
+      <text x="340" y="469" fill="#fff" font-size="17" font-weight="700">Doctor appointment</text>
+      <text x="340" y="495" fill="#9aa6bc" font-size="13">Google Calendar · 2:30 PM</text>
+      <rect x="292" y="544" width="182" height="38" rx="12" fill="#6d5dfc"/>
+      <text x="333" y="569" fill="#fff" font-size="14" font-weight="700">Refresh now</text>
+      <rect x="486" y="544" width="182" height="38" rx="12" fill="#28334a"/>
+      <text x="531" y="569" fill="#d7deec" font-size="14" font-weight="700">All upcoming</text>
+    </g>
+  </g>
+</svg>
