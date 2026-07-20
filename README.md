@@ -170,67 +170,6 @@ Startup works most reliably with an installed build rather than a project launch
 | `npm run dist:mac:intel` | Build for Intel Macs. |
 | `npm run dist:mac:universal` | Build a universal macOS DMG. |
 
-## Project structure
-
-```text
-calendar-canvas-dashboard/
-├── .github/
-│   └── workflows/
-│       ├── build.yml          # Windows/macOS build workflow
-│       └── pages.yml          # GitHub Pages deployment
-├── docs/
-│   ├── assets/
-│   │   ├── dashboard-preview.svg
-│   │   └── logo.svg
-│   ├── index.html             # GitHub Pages landing page
-│   └── styles.css
-├── src/
-│   ├── index.html             # Electron window markup
-│   ├── main.js                # App lifecycle and API integrations
-│   ├── preload.js             # Secure IPC bridge
-│   ├── renderer.js            # UI behavior and rendering
-│   └── styles.css             # Desktop app styling
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── PRIVACY.md
-├── SECURITY.md
-├── package.json
-└── README.md
-```
-
-## GitHub Pages website
-
-The `docs/` directory contains a complete project website.
-
-After uploading the repository:
-
-1. Replace every occurrence of `YOUR-USERNAME` with your GitHub username.
-2. Open the repository on GitHub.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose **GitHub Actions**.
-5. Push to the `main` branch or manually run the **Deploy GitHub Pages** workflow.
-
-The resulting site will normally be available at:
-
-```text
-https://YOUR-USERNAME.github.io/calendar-canvas-dashboard/
-```
-
-## Upload this project to GitHub
-
-Create an empty GitHub repository named `calendar-canvas-dashboard`, then run from this project folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial Calendar Canvas Dashboard release"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/calendar-canvas-dashboard.git
-git push -u origin main
-```
-
-Do not upload `node_modules/`, `dist/`, OAuth JSON files, Canvas tokens, or application settings. The included `.gitignore` excludes common generated and secret files.
 
 ## Roadmap
 
